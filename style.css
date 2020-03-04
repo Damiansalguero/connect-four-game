@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    background: #000;
+    background-size: cover;
+}
+
+.slot {
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+}
+.hole {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    -moz-box-shadow: inset -6px -11px 16px #047a5c;
+    -webkit-box-shadow: inset -6px -11px 16px #047a5c;
+    box-shadow: inset -6px -11px 16px #047a5c;
+}
+
+.slot.player1 .hole {
+    background-color: #ffdf00;
+}
+.slot.player2 .hole {
+    background-color: #ff0000;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+#board {
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    background: -webkit-gradient(
+        linear,
+        67% 0%,
+        94% 100%,
+        from(#19806e),
+        to(#000000)
+    );
+    margin-top: 50px;
+}
+
+.win {
+    position: absolute;
+    top: 33%;
+    height: 35%;
+    width: 100%;
+    background-color: rgba(243, 243, 243, 0.5);
+    display: none;
+    z-index: 1;
+}
+
+.win > div {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    color: black;
+    font-family: "Press Start 2P", cursive;
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 1%;
+    -webkit-animation: cssAnimation 1.2015s 20 ease-in;
+    -moz-animation: cssAnimation 1.2015s 20 ease-in;
+    -o-animation: cssAnimation 1.2015s 20 ease-in;
+}
+@-webkit-keyframes cssAnimation {
+    from {
+        -webkit-transform: rotate(0deg) scale(1.276) skew(0deg) translate(-3px);
+    }
+    to {
+        -webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+    }
+}
+@-moz-keyframes cssAnimation {
+    from {
+        -moz-transform: rotate(0deg) scale(1.276) skew(0deg) translate(-3px);
+    }
+    to {
+        -moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+    }
+}
+@-o-keyframes cssAnimation {
+    from {
+        -o-transform: rotate(0deg) scale(1.276) skew(0deg) translate(-3px);
+    }
+    to {
+        -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+    }
+}
+
+.button {
+    background: -webkit-gradient(
+        linear,
+        100% 70%,
+        10% 21%,
+        from(#1b0000),
+        to(#de0081)
+    );
+    border: none;
+    font-family: "Press Start 2P", cursive;
+    color: white;
+    padding: 20px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+}
+
+.dance {
+    width: 100%;
+    position: absolute;
+    top: 38%;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#dance3,
+#dance4 {
+    height: 150px;
+    width: 250px;
+    margin-top: 2%;
+}
+
+/* #dance4 {
+    height: 410px;
+    width: 400px;
+} */
